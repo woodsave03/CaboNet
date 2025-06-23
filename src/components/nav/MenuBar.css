@@ -1,0 +1,26 @@
+.menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--color-dark);
+    color: var(--color-menu-text);
+    font-size: 1rem;
+    padding: 0 1rem;
+
+    -webkit-app-region: drag;
+
+    /*height: 30px;*/
+}
+
+.menu-item {
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+
+    -webkit-app-region: no-drag;
+
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: var(--theme-color-secondary)
+}

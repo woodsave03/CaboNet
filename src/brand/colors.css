@@ -5,8 +5,8 @@
     --color-secondary: #d8bd8f;
     --color-secondary-hover: #c2a67a;
     --color-secondary-active: #a88f66;
-    --color-text: #333333;
-    --color-text-secondary: #656156;
+    --theme-color-primary: #333333;
+    --theme-color-secondary: #656156;
     --color-text-placeholder: #999999;
     --color-text-error: #ff0000;
     --color-background: #ffffff;
@@ -70,7 +70,7 @@
     --color-tooltip-shadow: rgba(0, 0, 0, 0.1);
     --color-tooltip-arrow: #333333;
     --color-toast-background: #333333;
-    --color-toast-text: #ffffff;
+    --color-menu-text: #ffffff;
     --color-toast-border: #cccccc;
     --color-toast-shadow: rgba(0, 0, 0, 0.1);
     --color-toast-success: #77BA7A;
@@ -130,4 +130,5 @@
     --color-input-background: var(--color-background);
     --color-input-text: var(--color-text);
     --color-input-placeholder: var(--color-text-placeholder);
+
 }
