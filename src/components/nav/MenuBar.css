@@ -2,25 +2,35 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--color-dark);
+    background-color: var(--theme-color-primary);
     color: var(--color-menu-text);
     font-size: 1rem;
     padding: 0 1rem;
+    gap: 1rem;
+
+    border-bottom: 1px solid var(--color-border);
 
     -webkit-app-region: drag;
 
-    /*height: 30px;*/
+    height: 8%;
 }
 
 .menu-item {
     padding: 0.5rem 1rem;
     line-height: 1.5;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+    width: 11%;
 
     -webkit-app-region: no-drag;
 
     cursor: pointer;
+
+
 }
 
-.menu-item:hover {
+.menu-item:hover, .menu-item.active {
     background-color: var(--theme-color-secondary)
 }

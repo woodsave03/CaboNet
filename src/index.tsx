@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './app';
 import './index.css'; // Import global styles
+import './brand/colors.css'; // Import brand colors
 
 const container = document.getElementById('root');
 

@@ -4,5 +4,13 @@ body {
 }
 
 div.screen {
-  padding: 1rem;
+  /*padding: 1rem;*/
+}
+
+#root, html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--color-background);
 }

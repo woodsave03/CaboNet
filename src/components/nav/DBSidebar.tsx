@@ -1,11 +1,12 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+
+import './DBSidebar.css'; // Import the CSS for the sidebar
 
 interface Props {
     onNavigate: (screen: string) => void;
 }
 
-const DBSidebar: React.FC<Props> = ({ onNavigate }) => {
+const DBSidebar: React.FC<Props> = ({onNavigate}) => {
     const [activeScreen, setActiveScreen] = useState<string>('search');
 
     const handleNavigation = (screen: string) => {
@@ -17,30 +18,32 @@ const DBSidebar: React.FC<Props> = ({ onNavigate }) => {
     // Sidebar entries: Search, Edit, Blurbs, Builder
     return (
         <div className="db-sidebar">
-            <div
-                className={`sidebar-item ${activeScreen === 'search' ? 'active' : ''}`}
-                onClick={() => handleNavigation('search')}
-            >
-                Search
-            </div>
-            <div
-                className={`sidebar-item ${activeScreen === 'edit' ? 'active' : ''}`}
-                onClick={() => handleNavigation('edit')}
-            >
-                Edit
-            </div>
-            <div
-                className={`sidebar-item ${activeScreen === 'blurbs' ? 'active' : ''}`}
-                onClick={() => handleNavigation('blurbs')}
-            >
-                Blurbs
-            </div>
-            <div
-                className={`sidebar-item ${activeScreen === 'builder' ? 'active' : ''}`}
-                onClick={() => handleNavigation('builder')}
-            >
-                Builder
-            </div>
+            <ul>
+                <li
+                    className={`sidebar-item ${activeScreen === 'search' ? 'active' : ''}`}
+                    onClick={() => handleNavigation('search')}
+                >
+                    Search
+                </li>
+                <li
+                    className={`sidebar-item ${activeScreen === 'edit' ? 'active' : ''}`}
+                    onClick={() => handleNavigation('edit')}
+                >
+                    Edit
+                </li>
+                <li
+                    className={`sidebar-item ${activeScreen === 'blurbs' ? 'active' : ''}`}
+                    onClick={() => handleNavigation('blurbs')}
+                >
+                    Blurbs
+                </li>
+                <li
+                    className={`sidebar-item ${activeScreen === 'builder' ? 'active' : ''}`}
+                    onClick={() => handleNavigation('builder')}
+                >
+                    Builder
+                </li>
+            </ul>
         </div>
     );
 };

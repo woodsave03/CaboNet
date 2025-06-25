@@ -2,7 +2,7 @@ import React from 'react';
 
 const DBSearchScreen: React.FC = () => {
     return (
-        <div className="db-sidebar">
+        <div>
             This is the Database Search Screen.
         </div>
     );
