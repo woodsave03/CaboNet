@@ -1,0 +1,76 @@
+.rock-entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: var(--color-secondary);
+    border: 1px solid var(--color-dark);
+    border-radius: 5px;
+    padding-block: 0.25rem;
+    padding-inline: 0.5rem;
+    box-sizing: border-box;
+    height: 2rem;
+
+    font-size: 0.875rem;
+}
+
+.rock-entry.selected {
+    outline: 2px solid var(--color-primary);
+}
+
+.rock-entry .grouped {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 15%;
+}
+
+.rock-entry .field {
+    border-left: 2px solid var(--color-dark);
+
+    padding-inline: 0.5rem;
+}
+
+.rock-entry > .field:last-child {
+    padding-right: 0;
+}
+
+.rock-entry .field p {
+    padding-block: 0;
+    margin-block: 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.rock-entry__name {
+
+}
+
+.rock-entry__description {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 0;
+}
+
+.rock-entry__group {
+
+}
+
+.rock-entry__family {
+
+}
+
+.rock-entry__locale {
+
+}
+
+.rock-entry__copy-icon {
+    fill: black;
+    cursor: pointer;
+    padding: 1px;
+    width: 1.25rem;
+}

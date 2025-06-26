@@ -1,0 +1,7 @@
+.check-icon {
+    fill: var(--color-success);
+}
+
+.check-icon.selected {
+    fill: var(--color-background);
+}

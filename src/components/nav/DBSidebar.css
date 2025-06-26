@@ -5,6 +5,7 @@
     background-color: var(--theme-color-secondary);
     background: var(--theme-color-secondary);
     color: var(--color-menu-text);
+    min-width: 6rem;
 }
 
 .db-sidebar ul {
@@ -12,11 +13,11 @@
     margin: 0;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .db-sidebar li {
     list-style: none;
-    padding-inline: 3rem;
     border: none;
     border-bottom: 1px solid var(--color-border);
     background-color: var(--theme-color-secondary);
@@ -25,10 +26,20 @@
     font-size: 1.5rem;
     text-align: center;
     cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 10%;
 
     /* Outline the text */
     font-weight: bold;
     -webkit-text-stroke: 1px black;
+}
+
+.db-sidebar li p {
+    margin: 0;
+    padding: 0;
+    color: var(--color-menu-text);
+    box-sizing: border-box;
 }
 
 .db-sidebar li:hover, .db-sidebar li.active {

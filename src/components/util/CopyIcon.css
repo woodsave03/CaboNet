@@ -1,0 +1,9 @@
+.copy-icon {
+    fill: black;
+    cursor: pointer;
+    padding: 1px;
+}
+
+.copy-icon:hover {
+    fill: var(--color-menu-text);
+}

@@ -6,7 +6,7 @@ interface MenuBarProps {
 }
 
 const MenuBar: React.FC<MenuBarProps> = ({ onNavigate }) => {
-    const [activeScreen, setActiveScreen] = useState<string>('search');
+    const [activeScreen, setActiveScreen] = useState<string>('database');
 
     const handleNavigation = (screen: string) => {
         setActiveScreen(screen);

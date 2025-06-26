@@ -23,25 +23,25 @@ const DBSidebar: React.FC<Props> = ({onNavigate}) => {
                     className={`sidebar-item ${activeScreen === 'search' ? 'active' : ''}`}
                     onClick={() => handleNavigation('search')}
                 >
-                    Search
+                    <p>Search</p>
                 </li>
                 <li
                     className={`sidebar-item ${activeScreen === 'edit' ? 'active' : ''}`}
                     onClick={() => handleNavigation('edit')}
                 >
-                    Edit
+                    <p>Edit</p>
                 </li>
                 <li
                     className={`sidebar-item ${activeScreen === 'blurbs' ? 'active' : ''}`}
                     onClick={() => handleNavigation('blurbs')}
                 >
-                    Blurbs
+                    <p>Blurbs</p>
                 </li>
                 <li
                     className={`sidebar-item ${activeScreen === 'builder' ? 'active' : ''}`}
                     onClick={() => handleNavigation('builder')}
                 >
-                    Builder
+                    <p>Builder</p>
                 </li>
             </ul>
         </div>
