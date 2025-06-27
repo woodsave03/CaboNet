@@ -49,7 +49,7 @@
     --color-gradient-hover-end: #2d4f8f;
     --color-gradient-active-start: #2d4f8f;
     --color-gradient-active-end: #1f3a5f;
-    --color-border-radius: 4px;
+    --color-border-radius: .4rem; /* 4px */
     --color-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --color-box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
     --color-box-shadow-active: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -115,20 +115,4 @@
     --color-scrollbar-track-border: #f0f0f0;
     --color-scrollbar-track-hover-border: #e0e0e0;
     --color-scrollbar-track-active-border: #d0d0d0;
-}
-
-/* Additional color variables for specific components */
-:root {
-    --color-button-primary: var(--color-primary);
-    --color-button-primary-hover: var(--color-primary-hover);
-    --color-button-primary-active: var(--color-primary-active);
-    --color-button-secondary: var(--color-secondary);
-    --color-button-secondary-hover: var(--color-secondary-hover);
-    --color-button-secondary-active: var(--color-secondary-active);
-    --color-input-border: var(--color-border);
-    --color-input-border-focus: var(--color-primary);
-    --color-input-background: var(--color-background);
-    --color-input-text: var(--color-text);
-    --color-input-placeholder: var(--color-text-placeholder);
-
 }

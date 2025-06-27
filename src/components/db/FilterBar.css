@@ -1,0 +1,11 @@
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+
+    align-items: end;
+    gap: 1rem;
+}
+
+.filter-bar button {
+    color: var(--color-menu-text);
+}

@@ -1,0 +1,17 @@
+.profile-icon {
+    height: 60%;
+    width: auto;
+
+    margin: 10% 0;
+
+    stroke: var(--color-menu-text);
+    fill: none;
+}
+
+.profile-icon:hover {
+    cursor: pointer;
+    fill: var(--color-border-active);
+    stroke: var(--color-menu-text);
+}
+
+

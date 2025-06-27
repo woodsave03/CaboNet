@@ -14,52 +14,70 @@ interface rock_entry {
     id: number;
 }
 
-const RockEntry: React.FC<rock_entry> = ({name, group, family, locale, description, id}) => {
+interface props {
+    rock_entry: rock_entry;
+    className?: string;
+    onSelect: () => void;
+    isSelected?: boolean;
+}
+
+const RockEntry: React.FC<props> = ({rock_entry, className, onSelect, isSelected}) => {
     const [copied, setCopied] = useState(false);
-    const [selected, setSelected] = useState(false);
+
+    if (!rock_entry) {
+        rock_entry = {
+            name: "Name",
+            group: "Group",
+            family: "Family",
+            locale: "Locale",
+            description: "Description",
+            id: -1
+        }
+    }
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(description)
+        navigator.clipboard.writeText(rock_entry.description)
             .then(() => {
                 setCopied(true);
-                console.log('Description copied to clipboard:', description);
+                console.log('Description copied to clipboard:', rock_entry.description);
                 setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
             })
             .catch(err => console.error('Failed to copy text: ', err));
     };
 
     const toggleSelect = () => {
-        setSelected(prev => !prev);
+        onSelect();
+        console.log(`Toggling selection for rock entry: ${rock_entry.name}`);
     }
 
     return (
-        <div className={`rock-entry ${selected ? 'selected' : ''}`}>
+        <div className={`rock-entry ${className} ${isSelected ? 'selected' : ''}`}>
             <div className={"grouped"}>
-                <SelectButton isSelected={selected} onToggle={toggleSelect}/>
+                <SelectButton isSelected={isSelected} onToggle={toggleSelect}/>
                 <div className="rock-entry__name field">
                     <p>
-                        {name}
+                        {rock_entry.name}
                     </p>
                 </div>
             </div>
             <div className="rock-entry__group field">
                 <p>
-                    {group}
+                    {rock_entry.group}
                 </p>
             </div>
             <div className="rock-entry__family field">
                 <p>
-                    {family}
+                    {rock_entry.family}
                 </p>
             </div>
             <div className="rock-entry__locale field">
                 <p>
-                    {locale}
+                    {rock_entry.locale}
                 </p>
             </div>
             <div className="field rock-entry__description">
                 <p>
-                    {description}
+                    {rock_entry.description}
                 </p>
                 <div className="rock-entry__copy-icon" onClick={handleCopy}>
                     {copied ? <CheckIcon className="check-icon"/> : <CopyIcon className="copy-icon"/>}

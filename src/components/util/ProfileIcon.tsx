@@ -1,0 +1,28 @@
+import React from 'react';
+
+import './ProfileIcon.css';
+
+interface Props {
+    className?: string;
+}
+
+const ProfileIcon: React.FC<Props> = ({className}) => {
+    return (
+        <svg className={className} viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut"
+             version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <desc/>
+            <g>
+                <circle cx="16" cy="16" r="15" stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"/>
+                <path d="M26,27L26,27   c0-5.523-4.477-10-10-10h0c-5.523,0-10,4.477-10,10v0"
+                      stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                <circle cx="16" cy="11" r="6" stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"/>
+            </g>
+        </svg>
+    )
+}
+
+export default ProfileIcon;

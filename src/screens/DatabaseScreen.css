@@ -9,3 +9,9 @@
     width: 89%;
     padding: 2rem;
 }
+
+.database-interface {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

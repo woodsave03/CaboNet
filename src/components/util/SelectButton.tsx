@@ -19,7 +19,9 @@ const SelectButton: React.FC<SelectButtonProps> = ({ isSelected, onToggle }) => 
             aria-pressed={isSelected}
             onClick={onToggle}
         >
-            {isSelected ? <CheckIcon className={"check-icon selected"}/> : ''}
+            <div>
+                {isSelected ? <CheckIcon className={"check-icon selected"}/> : ''}
+            </div>
         </button>
     );
 }
